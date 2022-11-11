@@ -2,7 +2,6 @@ package cucumberHooks;
 
 
 import io.cucumber.java.AfterStep;
-import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
@@ -33,12 +32,13 @@ public class Hooks {
                 if (browser == null) {
                     browser = System.getenv("BROWSER");
                     if (browser == null) {
-                        browser = "hchrome";
+                        browser = "hfirefox";
                     }
                 }
 
                 switch (browser) {
                     case "firefox":
+                        WebDriverManager.firefoxdriver().setup();
                         FirefoxOptions firefoxOptions = new FirefoxOptions();
 //                        firefoxOptions.addArguments("start-maximized");
 //                        firefoxOptions.addArguments("window-size=1920x1080");
@@ -46,6 +46,7 @@ public class Hooks {
                         break;
 
                     case "hfirefox":
+                        WebDriverManager.firefoxdriver().setup();
                         FirefoxOptions hfirefoxOptions = new FirefoxOptions();
                         hfirefoxOptions.addArguments("--headless");
                         driver = new FirefoxDriver(hfirefoxOptions);
@@ -66,12 +67,14 @@ public class Hooks {
                         break;
 
                     case "hedge":
+                        WebDriverManager.edgedriver().setup();
                         EdgeOptions hegdeoptions = new EdgeOptions();
                         hegdeoptions.addArguments("--headless");
                         driver = new EdgeDriver(hegdeoptions);
                         break;
 
                     case "edge":
+                        WebDriverManager.edgedriver().setup();
                         EdgeOptions edgeOptions = new EdgeOptions();
                         edgeOptions.addArguments("start-maximized");
                         driver = new EdgeDriver(edgeOptions);
@@ -116,24 +119,6 @@ public class Hooks {
         if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "Screenshot Failed");
-        }
-    }
-
-    @BeforeAll
-    public void deleteScreenshotsFiles(){
-        try {
-            String workingDir = System.getProperty("user.dir");
-            String pathFolderextent = workingDir + "allure-results";
-            File file = new File(pathFolderextent);
-            File[] listOfFiles = file.listFiles();
-            System.out.println("......................"+pathFolderextent);
-            for(int i = 0; i < listOfFiles.length; i++){
-                if(listOfFiles[i].isFile()){
-                    new File(listOfFiles[i].toString()).delete();
-                }
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
         }
     }
 
