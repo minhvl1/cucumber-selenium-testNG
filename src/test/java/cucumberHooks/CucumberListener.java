@@ -55,7 +55,7 @@ public class CucumberListener implements EventListener {
 
     // Here we create the reporter
     private void runStarted(TestRunStarted event) {
-        spark = new ExtentSparkReporter("reports" + File.separator + "ExtentReport.html");
+        spark = new ExtentSparkReporter("extentReport" + File.separator +"reports" + File.separator + "ExtentReport.html");
         extent = new ExtentReports();
         // Create extent report instance with spark reporter
         extent.attachReporter(spark);
@@ -70,7 +70,7 @@ public class CucumberListener implements EventListener {
 
     // TestRunFinished event is triggered when all feature file executions are completed
     private void runFinished(TestRunFinished event) {
-        extent.flush();
+//        extent.flush();
     }
 
     // This event is triggered when feature file is read

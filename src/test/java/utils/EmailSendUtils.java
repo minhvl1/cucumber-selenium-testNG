@@ -25,7 +25,7 @@ public class EmailSendUtils {
             //System.out.println(messageBody);
 
             try {
-                EmailAttachmentsSender.sendEmailWithAttachments(SERVER, PORT, FROM, PASSWORD, TO, SUBJECT, messageBody);
+                EmailAttachmentsSender.sendEmailWithAttachments(SERVER, PORT, FROM, PASSWORD, TO, SUBJECT, messageBody,"extentReport/PdfReport/ExtendPdf.pdf");
 
                 System.out.println("****************************************");
                 System.out.println("Email sent successfully.");
