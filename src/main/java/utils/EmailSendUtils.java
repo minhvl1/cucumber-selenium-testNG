@@ -1,9 +1,4 @@
-package utils;/*
- * Copyright (c) 2022 Anh Tester
- * Automation Framework Selenium
- */
-
-
+package utils;
 
 import constants.FrameworkConstants;
 import mail.EmailAttachmentsSender;
