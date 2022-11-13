@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Nov 13 10:00:09 GMT 2022","Sun Nov 13 10:00:18 GMT 2022","9010","Suite:Google features","Search Minh in goole","runners.TestRunnerForEachFeatures","runners.TestRunnerForEachFeatures","runScenario","Runs Cucumber Scenarios",""
