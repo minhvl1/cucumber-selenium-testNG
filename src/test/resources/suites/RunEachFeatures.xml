@@ -1,13 +1,13 @@
 <?xml version = "1.0"encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name = "Suite1">
+<suite name = "Suite:Google features">
 <!--    <listeners>-->
 <!--        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>-->
 <!--    </listeners>-->
 
-    <test name = "Test Demo">
+    <test name = "Search Minh in goole">
         <classes>
-            <class name = "runners.TestRunner"/>
+            <class name = "runners.TestRunnerForEachFeatures"/>
         </classes>
 
     </test>

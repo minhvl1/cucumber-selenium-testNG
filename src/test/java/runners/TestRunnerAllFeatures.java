@@ -22,10 +22,10 @@ import java.io.File;
                 "json:target/cucumber-reports/cucumber-reports.json",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
          monochrome = true,
-        tags = "@Feature1"
+        tags = "@Feature1 or @Feature2"
 )
 
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class TestRunnerAllFeatures extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = false)
     public Object[][] scenarios() {
