@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Nov 14 15:16:31 GMT 2022","Mon Nov 14 15:16:36 GMT 2022","5040","Suite:Run all features","Search on google","runners.TestRunnerAllFeatures","runners.TestRunnerAllFeatures","runScenario","Runs Cucumber Scenarios",""
+"passed","Mon Nov 14 15:16:42 GMT 2022","Mon Nov 14 15:16:46 GMT 2022","3907","Suite:Run all features","Search on google","runners.TestRunnerAllFeatures","runners.TestRunnerAllFeatures","runScenario","Runs Cucumber Scenarios",""
+"passed","Mon Nov 14 15:16:36 GMT 2022","Mon Nov 14 15:16:42 GMT 2022","5917","Suite:Run all features","Search on google","runners.TestRunnerAllFeatures","runners.TestRunnerAllFeatures","runScenario","Runs Cucumber Scenarios",""
+"passed","Mon Nov 14 15:16:46 GMT 2022","Mon Nov 14 15:16:51 GMT 2022","4718","Suite:Run all features","Search on google","runners.TestRunnerAllFeatures","runners.TestRunnerAllFeatures","runScenario","Runs Cucumber Scenarios",""
+"passed","Mon Nov 14 15:16:21 GMT 2022","Mon Nov 14 15:16:31 GMT 2022","9761","Suite:Run all features","Search on google","runners.TestRunnerAllFeatures","runners.TestRunnerAllFeatures","runScenario","Runs Cucumber Scenarios",""
