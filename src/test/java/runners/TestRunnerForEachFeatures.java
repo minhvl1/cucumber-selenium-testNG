@@ -18,6 +18,7 @@ import java.io.File;
         glue = {"Steps","cucumberHooks"},
         plugin = {"cucumberHooks.CucumberListener",
                 "pretty",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "html:target/cucumber-reports/cucumber-reports.html",
                 "json:target/cucumber-reports/cucumber-reports.json",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},

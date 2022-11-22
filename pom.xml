@@ -14,7 +14,6 @@
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
         <aspectjweaver.version>1.9.9.1</aspectjweaver.version>
-        <allure.version>2.19.0</allure.version>
         <testng.version>7.6.1</testng.version>
         <webdriver.version>RELEASE</webdriver.version>
         <cucumber.java.version>7.9.0</cucumber.java.version>
@@ -24,10 +23,16 @@
         <extentreports.version>5.0.9</extentreports.version>
         <javax.mail.version>1.6.2</javax.mail.version>
         <extentreports.version>5.0.9</extentreports.version>
-        <allure-testng.version>2.20.1</allure-testng.version>
+
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>2.20.1</version>
+        </dependency>
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -73,11 +78,10 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-gherkin -->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-gherkin</artifactId>
-            <version>${cucumber.java.version}</version>
+            <artifactId>gherkin</artifactId>
+            <version>25.0.2</version>
         </dependency>
 
         <dependency>
@@ -125,16 +129,7 @@
             <version>${aspectjweaver.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allure-testng.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-attachments</artifactId>
-            <version>${allure-testng.version}</version>
-        </dependency>
+
     </dependencies>
 
 <profiles>
@@ -226,12 +221,6 @@
                         <version>${aspectjweaver.version}</version>
                     </dependency>
                 </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>2.11.2</version>
-                <configuration> <reportDirectory>${basedir}\target\allure-report</reportDirectory> </configuration>
             </plugin>
 
 

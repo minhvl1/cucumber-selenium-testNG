@@ -1,6 +1,7 @@
 package cucumberHooks;
 
 
+import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -113,7 +114,7 @@ public class Hooks {
         }
     }
 
-    @AfterStep
+    @After
     public void afterStep(Scenario scenario) {
         //validate if scenario has failed then Screenshot
         if (scenario.isFailed()) {
