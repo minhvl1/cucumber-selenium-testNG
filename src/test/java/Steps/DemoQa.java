@@ -27,8 +27,7 @@ public class DemoQa {
 
     @When("check {string} radio button")
     public void checkArgRadioButton(String arg0) {
-        String label = arg0.toLowerCase();
-        demoQaObject.clickToRadioButton(label);
+        demoQaObject.clickToRadioButton(arg0.toLowerCase());
     }
 
     @Then("See result contain {string}")

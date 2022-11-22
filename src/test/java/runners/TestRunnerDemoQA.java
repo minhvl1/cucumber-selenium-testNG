@@ -49,13 +49,23 @@ public class TestRunnerDemoQA extends AbstractTestNGCucumberTests {
         try {
             System.out.println("================ BEFORE SUITE ================");
 //            String workingDir = System.getProperty("user.dir");
-            String pathFolderextent = "allure-results";
-            File file = new File(pathFolderextent);
-            File[] listOfFiles = file.listFiles();
-            System.out.println("......................"+pathFolderextent);
-            for(int i = 0; i < listOfFiles.length; i++){
-                if(listOfFiles[i].isFile()){
-                    new File(listOfFiles[i].toString()).delete();
+            String pathFolderallure = "allure-results";
+            String pathFolerScreenshot="extentReport/screenshots";
+
+            File fileAllure = new File(pathFolderallure);
+            File fileScreenshot = new File(pathFolerScreenshot);
+
+            File[] listOfFilesAllure = fileAllure.listFiles();
+            File[] listOfFilesScreenshot = fileScreenshot.listFiles();
+            System.out.println("......................"+pathFolderallure);
+            for(int i = 0; i < listOfFilesAllure.length; i++){
+                if(listOfFilesAllure[i].isFile()){
+                    new File(listOfFilesAllure[i].toString()).delete();
+                }
+            }
+            for(int i = 0; i < listOfFilesScreenshot.length; i++){
+                if(listOfFilesScreenshot[i].isFile()){
+                    new File(listOfFilesScreenshot[i].toString()).delete();
                 }
             }
             System.out.println("================ DELETE ================");
