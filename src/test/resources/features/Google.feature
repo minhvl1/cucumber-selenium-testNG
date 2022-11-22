@@ -7,7 +7,7 @@ Feature: test google search
     When Search "youtube"
     And Click search button
     Then See result page
-
+    And URL contains "youtube"
 
 
   @Test2
@@ -16,3 +16,4 @@ Feature: test google search
     When Search "facebook"
     And Click search button
     Then See result page
+    And URL contains "facebook"

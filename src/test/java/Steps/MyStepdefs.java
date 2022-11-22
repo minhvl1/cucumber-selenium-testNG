@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import org.testng.asserts.SoftAssert;
 import pageObject.GooglePageObject;
 
 public class MyStepdefs {
@@ -42,5 +43,13 @@ public class MyStepdefs {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @And("URL contains {string}")
+    public void urlContains(String arg0) {
+        String url =driver.getCurrentUrl();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(url.contains(arg0));
+        softAssert.assertAll();
     }
 }

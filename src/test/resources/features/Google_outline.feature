@@ -7,6 +7,7 @@ Feature: test google search outline
     When Search <arg0>
     And Click search button
     Then See result page
+    And URL contains <arg0>
 
     @prod
     Examples:
