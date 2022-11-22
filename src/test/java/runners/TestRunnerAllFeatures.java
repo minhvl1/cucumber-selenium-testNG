@@ -15,7 +15,7 @@ import java.io.File;
 @Test
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"Steps"},
+        glue = {"Steps","cucumberHooks"},
         plugin = {"cucumberHooks.CucumberListener",
                 "pretty",
                 "html:target/cucumber-reports/cucumber-reports.html",
