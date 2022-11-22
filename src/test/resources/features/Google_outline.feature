@@ -7,6 +7,14 @@ Feature: test google search outline
     When Search <arg0>
     And Click search button
     Then See result page
+
+    @prod
+    Examples:
+      | arg0   |
+      | "CMC" |
+      |"fsoft"|
+      |"review cong ty"|
+    @staging
     Examples:
       | arg0   |
       | "CMC" |
