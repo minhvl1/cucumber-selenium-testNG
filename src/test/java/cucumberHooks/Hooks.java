@@ -118,7 +118,7 @@ public class Hooks {
         //validate if scenario has failed then Screenshot
         if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", "Screenshot Failed");
+            scenario.attach(screenshot, "image/png", scenario.getName());
         }
     }
 
