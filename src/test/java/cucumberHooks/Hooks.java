@@ -23,8 +23,13 @@ public class Hooks {
 
     private static WebDriver driver;
 
+    public static String BrowserName(){
+        String browser ="hfirefox";
+        return browser;
+    }
     public synchronized static WebDriver openAndQuitBrowser() {
-        String browser = System.getProperty("BROWSER");
+//        String browser = System.getProperty("BROWSER");
+        String browser = BrowserName();
         System.out.println("Browser name run by command line = " + browser);
 
         if (driver == null) {
