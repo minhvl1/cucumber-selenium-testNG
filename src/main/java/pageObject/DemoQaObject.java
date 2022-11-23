@@ -16,7 +16,7 @@ public class DemoQaObject extends BaseTest {
     }
 
     public void resultMessageContainText(String text){
-      softAssert.assertTrue(getTextElement(driver,DemoQaUI.getResultText).contains("1"));
+      softAssert.assertTrue(getTextElement(driver,DemoQaUI.getResultText).contains(text));
       softAssert.assertAll();
     }
 
