@@ -24,7 +24,7 @@ public class Hooks {
     private static WebDriver driver;
 
     public static String BrowserName(){
-        String browser ="hfirefox";
+        String browser ="hchrome";
         return browser;
     }
     public synchronized static WebDriver openAndQuitBrowser() {
