@@ -8,6 +8,7 @@
 ![image](https://user-images.githubusercontent.com/67543695/203227298-16684251-c790-4736-b1d2-9eb299d2e937.png)
 
 - Send mail after run test
+
 - Screenshot on failure
 ![image](https://user-images.githubusercontent.com/67543695/203460455-d8cf11ee-054d-4a78-8dac-0cd9537fce47.png)
 
@@ -15,7 +16,7 @@
 
 ![cucumber](https://user-images.githubusercontent.com/67543695/203220841-2ef7cc50-8d5b-468e-ade3-1eb3590cb9ff.png)
 
-- Public Allure report into github page
+- Public Allure report into github page with url: https://minhvl1.github.io/cucumber-selenium-testNG
 ![image](https://user-images.githubusercontent.com/67543695/203460253-58278ba7-1fc8-4afd-af66-8e690e8902d5.png)
 
 ![image](https://user-images.githubusercontent.com/67543695/203460322-01b0edaa-5e71-4c96-97ca-324074de5e4d.png)
