@@ -8,6 +8,10 @@
 ![image](https://user-images.githubusercontent.com/67543695/203227298-16684251-c790-4736-b1d2-9eb299d2e937.png)
 
 - Send mail after run test
+- API testing
+![image](https://user-images.githubusercontent.com/67543695/203759144-b3e63180-a440-4d70-85d0-eb74074c2b46.png)
+
+![image](https://user-images.githubusercontent.com/67543695/203759215-4fcbea70-f154-45d7-b620-46f6867a58ba.png)
 
 - Screenshot on failure
 ![image](https://user-images.githubusercontent.com/67543695/203460455-d8cf11ee-054d-4a78-8dac-0cd9537fce47.png)
