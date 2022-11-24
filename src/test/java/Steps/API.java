@@ -42,7 +42,7 @@ public class API {
     public void idContains(String arg0) {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(getListResponse.get(0).contains(arg0));
-
+        softAssert.assertEquals(getResponse.getStatusCode(),"200");
     }
 
 }
