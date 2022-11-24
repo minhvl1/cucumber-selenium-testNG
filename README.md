@@ -11,6 +11,9 @@
 - API testing
 ![image](https://user-images.githubusercontent.com/67543695/203759144-b3e63180-a440-4d70-85d0-eb74074c2b46.png)
 
+![image](https://user-images.githubusercontent.com/67543695/203759468-78f09f79-7f69-4461-b427-95c18f26b69a.png)
+
+
 ![image](https://user-images.githubusercontent.com/67543695/203759215-4fcbea70-f154-45d7-b620-46f6867a58ba.png)
 
 - Screenshot on failure
