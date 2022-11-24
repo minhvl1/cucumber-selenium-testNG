@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class API {
     List<String> getListResponse;
     Response getResponse;
-    @When("send get method with id={string}")
+    @Given("send get method with id={string}")
     public void sendGetMethodWithId(String arg0) {
         RestAssured.baseURI = "https://fakerestapi.azurewebsites.net/api/v1/Activities";
         RequestSpecification httpRequest = RestAssured.given();
