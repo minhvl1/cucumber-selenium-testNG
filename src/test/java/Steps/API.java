@@ -5,27 +5,30 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
-import io.restassured.http.Header;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.json.simple.JSONObject;
 import org.testng.asserts.SoftAssert;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import static org.hamcrest.Matchers.equalTo;
+
 
 
 public class API {
     List<String> getListResponse;
     Response getResponse;
+    List<String> postListResponse;
+    Response postResponse;
     @Given("send get method with id={string}")
     public void sendGetMethodWithId(String arg0) {
         RestAssured.baseURI = "https://fakerestapi.azurewebsites.net/api/v1/Activities";
         RequestSpecification httpRequest = RestAssured.given();
+
+//        https://fakerestapi.azurewebsites.net/api/v1/Activities/1
         getResponse = httpRequest.request(Method.GET, arg0);
         String responseBody = getResponse.getBody().asString();
-
         getListResponse = new ArrayList<String>(Arrays.asList(responseBody.split(",")));
     }
 
@@ -39,54 +42,44 @@ public class API {
         System.out.println("==================End Response==================");
     }
 
-
-    @Then("id contains {string}")
-    public void idContains(String arg0) {
+    @Then("Status code is {string}")
+    public void statusCodeIs(String arg0) {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(getListResponse.get(0).contains(arg0));
-        softAssert.assertEquals(getResponse.getStatusCode(),"200");
+        softAssert.assertEquals(getResponse.getStatusCode(),Integer.parseInt(arg0));
+        softAssert.assertAll();
     }
 
 
-    //dont need get value api
-    @Given("test")
-    public void test() {
 
-        String baseUri = "https://fakerestapi.azurewebsites.net/api/v1";
-
-        // Request Scope
-        RequestSpecification request = RestAssured.given();
-
-        // add baseUri and basePath into the request
-        request.baseUri(baseUri);
-        request.basePath("/Activities");
-
-        // Response scope
-        final String FIRST_TODO = "/1";
-        Response response = request.get(FIRST_TODO);
-        response.prettyPrint();
-        response.then().body("id", equalTo(1));
-        response.then().body("title", equalTo("Activity 1"));
-        response.then().body("completed", equalTo(false));
+    @Given("send post method")
+    public void sendPostMethod() {
+        RestAssured.baseURI ="https://reqres.in/api";
+        RequestSpecification httpRequest = RestAssured.given();
+        JSONObject requestParams = new JSONObject();
+        requestParams.put("name", "morpheus");
+        requestParams.put("job", "leader");
+        httpRequest.header("Content-Type", "application/json");
+        httpRequest.body(requestParams.toJSONString());
+        postResponse = httpRequest.request(Method.POST,"/users");
+        String responseBody = postResponse.getBody().asString();
+        postListResponse = new ArrayList<String>(Arrays.asList(responseBody.split(",")));
     }
 
+    @When("show post response body")
+    public void showPostResponseBody() {
+        System.out.println("==================Response==================");
+        System.out.println("Status code:"+postResponse.getStatusCode());
+        for(int i =0; i<postListResponse.size();i++){
+            System.out.println(postListResponse.get(i));
+        }
 
-    @Given("test post")
-    public void testPost() {
-        String baseUri = "https://reqres.in/api/users";
+        System.out.println("==================End Response==================");
+    }
 
-        // Request Scope
-        RequestSpecification request = RestAssured.given();
-        request.baseUri(baseUri);
-
-        request.header(new Header("Content-type", "application/json; charset=UTF-8"));
-        String requestBody = "{\n" +
-                "    \"name\": \"morpheus\",\n" +
-                "    \"job\": \"leader\"\n" +
-                "}";
-        Response response = request.body(requestBody).post("/posts");
-        response.prettyPrint();
-        response.then().body("name", equalTo("morpheus"));
-        response.then().body("job", equalTo("leader"));
+    @Then("Status code post is {string}")
+    public void statusCodePostIs(String arg0) {
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(postResponse.getStatusCode(),Integer.parseInt(arg0));
+        softAssert.assertAll();
     }
 }

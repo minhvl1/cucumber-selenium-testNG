@@ -1,16 +1,14 @@
 @Feature4
 Feature: Demo API
 
-  @getvalueAPI
-  Scenario: API get method
+  @getMethodApi
+  Scenario: test get api
     Given send get method with id="1"
     When show get response body
-    Then id contains "1"
+    Then Status code is "200"
 
-#  @getMethodApi
-#  Scenario: test api
-#    Given test
-
-#  @postMethodApi
-#  Scenario: test post api
-#    Given test post
+  @postMethodApi
+  Scenario: test post api
+    Given send post method
+    When show post response body
+    Then Status code post is "201"
