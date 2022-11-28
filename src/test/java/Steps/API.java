@@ -17,6 +17,7 @@ import java.util.List;
 
 
 public class API {
+    SoftAssert softAssert = new SoftAssert();
     List<String> getListResponse;
     Response getResponse;
     List<String> postListResponse;
@@ -44,7 +45,6 @@ public class API {
 
     @Then("Status code is {string}")
     public void statusCodeIs(String arg0) {
-        SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(getResponse.getStatusCode(),Integer.parseInt(arg0));
         softAssert.assertAll();
     }
@@ -78,7 +78,6 @@ public class API {
 
     @Then("Status code post is {string}")
     public void statusCodePostIs(String arg0) {
-        SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(postResponse.getStatusCode(),Integer.parseInt(arg0));
         softAssert.assertAll();
     }

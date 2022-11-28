@@ -28,8 +28,8 @@ public class Hooks {
         return browser;
     }
     public synchronized static WebDriver openAndQuitBrowser() {
-//        String browser = System.getProperty("BROWSER");
-        String browser = BrowserName();
+        String browser = System.getProperty("BROWSER");
+//        String browser = BrowserName();
         System.out.println("Browser name run by command line = " + browser);
 
         if (driver == null) {
