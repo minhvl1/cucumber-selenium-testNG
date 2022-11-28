@@ -38,6 +38,10 @@
 
 `mvn clean verify`
 
+-run with browser (chrome, hchrome, firefox, hfirefox)
+
+` mvn clean verify -DBROWSER=hedge`
+
 - Run by profiles, 2 profiles config in POM
   + run-all-features
   ![image](https://user-images.githubusercontent.com/67543695/203220991-c0f895b7-1fdb-4ba0-bd2e-241feae93055.png)
