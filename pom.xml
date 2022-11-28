@@ -36,7 +36,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.4.0</version>
+            <version>${webdriver.version}</version>
             <scope>test</scope>
         </dependency>
 
