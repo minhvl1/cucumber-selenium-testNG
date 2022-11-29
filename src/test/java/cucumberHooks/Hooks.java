@@ -69,6 +69,8 @@ public class Hooks {
                         WebDriverManager.chromedriver().setup();
                         ChromeOptions chromeOptionsoptions = new ChromeOptions();
                         chromeOptionsoptions.addArguments("--headless");
+                        chromeOptionsoptions.addArguments("--disable-dev-shm-usage");
+                        chromeOptionsoptions.addArguments("--no-sandbox");
                         driver = new ChromeDriver(chromeOptionsoptions);
                         break;
 
