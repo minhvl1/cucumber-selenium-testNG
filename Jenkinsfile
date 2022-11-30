@@ -6,11 +6,7 @@ pipeline {
         }
     }
     stages {
-         stage ('Clone') {
-            steps {
-                git branch: 'jenkins', url: "https://github.com/minhvl1/cucumber-selenium-testNG.git"
-            }
-        }
+      
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
