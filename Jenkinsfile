@@ -6,7 +6,7 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
             maven 'MAVEN_HOME' 
     }
-    }
+    
     stages {
       
         stage('Build') {
