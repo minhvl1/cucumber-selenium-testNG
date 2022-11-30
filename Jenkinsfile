@@ -1,12 +1,12 @@
 pipeline {
-    agent 
+
+    agent {
         any {
             image 'maven:3-openjdk-8'
             args '-v /root/.m2:/root/.m2'
             maven 'MAVEN_HOME' 
     }
-}
-    
+    }
     stages {
       
         stage('Build') {
@@ -18,7 +18,8 @@ pipeline {
             steps {
                 sh 'mvn clean verify'
             }
-         
+          
+  
         }
     }
 }
