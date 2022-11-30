@@ -23,7 +23,7 @@ pipeline {
         }
     }
     post{
-        sucess{
+        success{
             office365ConnectorSend message:"pass in jenkins",
                 status:"SUCESS"
         }
