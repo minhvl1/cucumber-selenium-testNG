@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn clean verify -DBROWSER=hchrome'
+                sh 'mvn clean verify -DBROWSER=hfirefox'
                 
             }
           
