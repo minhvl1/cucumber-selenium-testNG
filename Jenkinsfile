@@ -1,5 +1,9 @@
 pipeline {
-
+    options {
+        office365ConnectorWebhooks([
+            [name: "Office 365", url: "${URL_WEBHOOK}", notifyBackToNormal: true, notifyFailure: true, notifyRepeatedFailure: true, notifySuccess: true, notifyAborted: true]
+        ])
+    }
     agent {
         any {
             image 'maven:3-openjdk-8'
