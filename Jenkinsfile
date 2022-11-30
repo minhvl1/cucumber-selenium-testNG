@@ -22,4 +22,14 @@ pipeline {
   
         }
     }
+    post{
+        sucess{
+            office365ConnectorSend message:"pass in jenkins",
+                status:"SUCESS"
+        }
+        failure{
+            office365ConnectorSend message:"build failed in Jenkins",
+                status:"FAILED"
+        }
+    }
 }
