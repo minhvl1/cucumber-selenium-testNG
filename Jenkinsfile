@@ -11,7 +11,6 @@ pipeline {
       
         stage('Build') {
             steps {
-                sh 'rm -r /root/.m2/'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
