@@ -66,7 +66,7 @@ public class Hooks {
                         break;
 
                     case "hchrome":
-                        WebDriverManager.chromedriver().setup();
+                        WebDriverManager.chromedriver().browserVersion("107.0.5304.121").setup();
                         ChromeOptions chromeOptionsoptions = new ChromeOptions();
                         chromeOptionsoptions.addArguments("--headless");
                         chromeOptionsoptions.addArguments("--disable-dev-shm-usage");
