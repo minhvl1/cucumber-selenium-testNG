@@ -66,4 +66,25 @@ public class ShadowRoot {
         }
 
     }
+
+    @Given("go to shopee")
+    public void goToShopee() {
+        driver.get("https://shopee.vn/");
+    }
+
+    @When("close popup")
+    public void closePopup() {
+        WebElement shadowHost = driver.findElement (By.cssSelector("shopee-banner-popup-stateful[spacekey='PC-VN-HOME_POPUP_01']"));
+        SearchContext shadowRoot1 = shadowHost.getShadowRoot ();
+        WebElement app2 = shadowRoot1.findElement (By.cssSelector (".shopee-popup__close-btn"));
+        app2.click();
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
 }

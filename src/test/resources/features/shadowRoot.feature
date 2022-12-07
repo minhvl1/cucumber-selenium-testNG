@@ -7,3 +7,8 @@ Feature: Shadow root
     When input username textbox
     And input pizza textbox
 
+  @shopee
+  Scenario: close popup shopee
+    Given go to shopee
+    When close popup
+
