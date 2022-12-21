@@ -1,5 +1,4 @@
 @Feature3
-@Ignore
   Feature: Demo QA site
 
     @RadioButton
