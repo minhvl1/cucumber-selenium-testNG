@@ -14,7 +14,7 @@ import java.io.File;
 
 @Test
 @CucumberOptions(
-        features = "src/test/resources/features/Google.feature",
+        features = "src/test/resources/features/",
         glue = {"Steps","cucumberHooks"},
         plugin = {"cucumberHooks.CucumberListener",
                 "pretty",
@@ -23,7 +23,7 @@ import java.io.File;
                 "json:target/cucumber-reports/cucumber-reports.json",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
          monochrome = true,
-        tags = "@Feature1"
+        tags = "@Feature5"
 )
 
 public class TestRunnerForEachFeatures extends AbstractTestNGCucumberTests {

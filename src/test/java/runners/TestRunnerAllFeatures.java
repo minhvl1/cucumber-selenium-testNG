@@ -23,7 +23,7 @@ import java.io.File;
                 "json:target/cucumber-reports/cucumber-reports.json",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
          monochrome = true
-//        tags = "@Feature1 or @Feature2 or @Feature3"
+        ,tags = "not @shopee"
 )
 
 public class TestRunnerAllFeatures extends AbstractTestNGCucumberTests {
