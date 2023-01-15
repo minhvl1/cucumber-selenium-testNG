@@ -1,4 +1,4 @@
-2023-01-15 19:01:803 INFO  MyStepdefs:35 - ===Open browser===
-2023-01-15 19:01:804 INFO  MyStepdefs:40 - ===Start===
-2023-01-15 19:01:941 INFO  MyStepdefs:52 - ===See result page===
-2023-01-15 19:01:949 INFO  MyStepdefs:63 - ===verify result page===
+[INFO ] 2023-01-15 19:33:34,488 MyStepdefs :35 - ===Open browser===
+[INFO ] 2023-01-15 19:33:34,489 MyStepdefs :40 - ===Start===
+[INFO ] 2023-01-15 19:33:35,520 MyStepdefs :52 - ===See result page===
+[INFO ] 2023-01-15 19:33:38,551 MyStepdefs :63 - ===verify result page===
