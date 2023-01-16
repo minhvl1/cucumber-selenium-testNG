@@ -22,9 +22,9 @@ public class MyStepdefs {
     private static final Logger logger = Logger.getLogger(MyStepdefs.class);
 
     public MyStepdefs() {
-        BasicConfigurator.configure();
-        String log4jConfPath = "log4j.properties";
-        PropertyConfigurator.configure(log4jConfPath);
+//        BasicConfigurator.configure();
+//        String log4jConfPath = "log4j.properties";
+//        PropertyConfigurator.configure(log4jConfPath);
         this.driver = Hooks.openAndQuitBrowser();
         googlePageObject = new GooglePageObject(driver);
     }
