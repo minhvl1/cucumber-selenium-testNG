@@ -56,7 +56,7 @@ pipeline {
                         status: 'Success',
                         color: "${currentBuild.currentResult} == 'SUCCESS' ? '#18d6a3' : '#ff9900'",
                         factDefinitions:[
-
+                                [ name: "Extend report", template: "[Report](http://192.168.66.116:2111/job/test/Extend_20Report/)"],
                                 [ name: "Commit Message", template: "${GIT_COMMIT_MSG}"],
                                 [ name: "Pipeline Duration", template: "Maven Cucumber TestNG #${currentBuild.number}"]
                             ]
