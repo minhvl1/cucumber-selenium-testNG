@@ -1,5 +1,5 @@
 package pageUIs;
 
 public class GoogleUI {
-    public static String getGoogleSearchTextbox="//input[@name='q']";
+    public static String getGoogleSearchTextbox="//textarea[@class='gLFyf']";
 }
