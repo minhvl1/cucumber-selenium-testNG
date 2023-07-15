@@ -61,6 +61,7 @@ public class Hooks {
                     case "chrome":
                         WebDriverManager.chromedriver().setup();
                         ChromeOptions options = new ChromeOptions();
+                        options.addArguments("--remote-allow-origins=*");
                         options.addArguments("start-maximized");
                         driver = new ChromeDriver(options);
                         break;
@@ -68,6 +69,7 @@ public class Hooks {
                     case "hchrome":
                         WebDriverManager.chromedriver().setup();
                         ChromeOptions chromeOptionsoptions = new ChromeOptions();
+                        chromeOptionsoptions.addArguments("--remote-allow-origins=*");
                         chromeOptionsoptions.addArguments("--headless");
                         chromeOptionsoptions.addArguments("--disable-dev-shm-usage");
                         chromeOptionsoptions.addArguments("--no-sandbox");
@@ -77,6 +79,7 @@ public class Hooks {
                     case "hedge":
 //                        WebDriverManager.edgedriver().setup();
                         EdgeOptions hegdeoptions = new EdgeOptions();
+                        hegdeoptions.addArguments("--remote-allow-origins=*");
                         hegdeoptions.addArguments("--headless");
                         driver = new EdgeDriver(hegdeoptions);
                         break;
@@ -84,6 +87,7 @@ public class Hooks {
                     case "edge":
 //                        WebDriverManager.edgedriver().setup();
                         EdgeOptions edgeOptions = new EdgeOptions();
+                        edgeOptions.addArguments("--remote-allow-origins=*");
                         edgeOptions.addArguments("start-maximized");
                         driver = new EdgeDriver(edgeOptions);
                         break;
